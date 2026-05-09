@@ -21,7 +21,7 @@ async function fetchStats() {
   const key = process.env.MONKEYTYPE_APE_KEY;
   if (!key) throw new Error('MONKEYTYPE_APE_KEY is not set');
 
-  const headers = { // Use ApeKey auth Authorization: `ApeKey ${key}` };
+  const headers = { // Use ApeKey auth // Use ApeKey auth Authorization: `ApeKey ${key}` };
   const res = await get('https://api.monkeytype.com/users/personalBests?mode=time', headers);
 
   if (!res.data) throw new Error(res.message || 'Failed to fetch personal bests');
