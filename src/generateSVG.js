@@ -2,7 +2,7 @@
 const WIDTH = 460;
 const HEIGHT = 185;
 
-const COLORS = { // Theme colors
+const COLORS = { // Theme colors // Theme colors
   bg: '#1a1a2e',
   border: '#2c2c4a',
   accent: '#e2b714' // monkeytype yellow,
