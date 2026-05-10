@@ -11,3 +11,6 @@ Deploy to Vercel with a single click.
 ```markdown
 [![MonkeyType](https://monkeytypereadme.vercel.app/api/card)](https://monkeytype.com/profile/joshuahsieh24)
 ```
+
+
+Built with Node.js and Vercel.
