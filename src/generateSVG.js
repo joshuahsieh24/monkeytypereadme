@@ -6,7 +6,7 @@ const HEIGHT = 185;
 const COLORS = { // Theme colors // Theme colors
   bg: '#1a1a2e',
   border: '#2c2c4a',
-  accent: '#e2b714' // monkeytype yellow,
+  accent: '#e2b714' // monkeytype yellow // monkeytype yellow,
   text: '#c7c8e9',
   dim: '#646479',
   divider: '#2c2c4a',
