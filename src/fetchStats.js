@@ -1,4 +1,5 @@
 /** Fetches stats from MonkeyType API */
+/** Fetches stats from MonkeyType API */
 const https = require('https');
 
 function get(url, headers) {
