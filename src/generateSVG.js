@@ -1,4 +1,5 @@
 /** Generates SVG string from stats */
+/** Generates SVG string from stats */
 const WIDTH = 460;
 const HEIGHT = 185;
 
