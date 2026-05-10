@@ -1,4 +1,4 @@
-# monkeytypereadme
+# ⌨️ MonkeyType README Stats Card
 
 Live MonkeyType stats card — embeddable anywhere as an SVG image
 
