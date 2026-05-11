@@ -18,5 +18,6 @@ jobs:
         with:
           ape_key: ${{ secrets.MONKEYTYPE_APE_KEY }}
           username: joshuahsieh24
+          modes: "10w 15s 60s"
           target_branch: monkeytype-card
           github_token: ${{ secrets.GITHUB_TOKEN }}
