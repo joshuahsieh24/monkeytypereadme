@@ -4,6 +4,5 @@
   "description": "Live MonkeyType stats card — embeddable anywhere as an SVG image",
   "engines": { "node": ">=20.x" },
   "author": "Joshua Hsieh",
-  "author": "Joshua Hsieh",
   "license": "MIT"
 }
