@@ -16,9 +16,10 @@ module.exports = async (req, res) => {
 
   try {
     const stats = await fetchStats();
-    res.send(generateSVG(stats));
+    res.end(generateSVG(stats));
   } catch (err) {
+    console.error('[monkeytype-card]', err);
     res.setHeader('Cache-Control', 'no-store');
-    res.send(errorSVG('error fetching stats'));
+    res.end(errorSVG(err.message.slice(0, 60)));
   }
 };
