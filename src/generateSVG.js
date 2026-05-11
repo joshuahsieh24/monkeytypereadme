@@ -1,12 +1,10 @@
-/** Generates SVG string from stats */
-/** Generates SVG string from stats */
 const WIDTH = 460;
 const HEIGHT = 185;
 
-const COLORS = { // Theme colors // Theme colors
+const COLORS = {
   bg: '#1a1a2e',
   border: '#2c2c4a',
-  accent: '#e2b714' // monkeytype yellow // monkeytype yellow,
+  accent: '#e2b714',
   text: '#c7c8e9',
   dim: '#646479',
   divider: '#2c2c4a',
@@ -20,9 +18,11 @@ function generateSVG({ username, bestWpm, modes }) {
 
   const modeCols = modes.map((m, i) => {
     const cx = modeStartX + i * modeColWidth + modeColWidth / 2;
+    const wpmText = m.wpm !== null ? m.wpm : '—';
+    const wpmColor = m.wpm !== null ? COLORS.text : COLORS.dim;
     return `
       <text x="${cx}" y="${modeY}" text-anchor="middle" font-size="11" fill="${COLORS.dim}" font-family="monospace">${m.label}</text>
-      <text x="${cx}" y="${modeY + 18}" text-anchor="middle" font-size="15" fill="${COLORS.text}" font-family="monospace" font-weight="600">${m.wpm}</text>`;
+      <text x="${cx}" y="${modeY + 18}" text-anchor="middle" font-size="15" fill="${wpmColor}" font-family="monospace" font-weight="600">${wpmText}</text>`;
   }).join('');
 
   const dividers = modes.slice(1).map((_, i) => {
