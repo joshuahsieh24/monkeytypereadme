@@ -13,6 +13,10 @@ inputs:
     description: 'Branch to commit the SVG to'
     required: false
     default: 'monkeytype-card'
+  modes:
+    description: 'Space-separated modes to display. Use Ns for time, Nw for words. Example: "10w 15s 60s"'
+    required: false
+    default: '10w 15s 60s'
   github_token:
     description: 'GitHub token for pushing (use secrets.GITHUB_TOKEN)'
     required: true
