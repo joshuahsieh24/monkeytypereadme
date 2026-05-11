@@ -1,0 +1,22 @@
+name: update monkeytype card
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: joshuahsieh24/monkeytypereadme@main
+        with:
+          ape_key: ${{ secrets.MONKEYTYPE_APE_KEY }}
+          username: joshuahsieh24
+          target_branch: monkeytype-card
+          github_token: ${{ secrets.GITHUB_TOKEN }}

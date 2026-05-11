@@ -1,0 +1,26 @@
+name: 'MonkeyType Card'
+description: 'Generate a MonkeyType stats SVG card and commit it to a branch in your repo'
+author: 'joshuahsieh24'
+
+inputs:
+  ape_key:
+    description: 'MonkeyType Ape Key (store as a repo secret)'
+    required: true
+  username:
+    description: 'MonkeyType username to display on the card'
+    required: true
+  target_branch:
+    description: 'Branch to commit the SVG to'
+    required: false
+    default: 'monkeytype-card'
+  github_token:
+    description: 'GitHub token for pushing (use secrets.GITHUB_TOKEN)'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'src/action.js'
+
+branding:
+  icon: 'zap'
+  color: 'yellow'
