@@ -5,6 +5,7 @@ const { generateSVG } = require('./generateSVG');
 
 process.env.MONKEYTYPE_APE_KEY = process.env.INPUT_APE_KEY;
 process.env.MONKEYTYPE_USERNAME = process.env.INPUT_USERNAME;
+const modes = process.env.INPUT_MODES || '10w 15s 60s';
 
 const branch = process.env.INPUT_TARGET_BRANCH || 'monkeytype-card';
 const token = process.env.INPUT_GITHUB_TOKEN;
@@ -15,8 +16,8 @@ function exec(cmd) {
 }
 
 async function run() {
-  console.log(`Fetching stats for ${process.env.INPUT_USERNAME}...`);
-  const stats = await fetchStats();
+  console.log(`Fetching stats for ${process.env.INPUT_USERNAME} (modes: ${modes})...`);
+  const stats = await fetchStats(modes);
   const svg = generateSVG(stats);
 
   fs.writeFileSync('monkeytype-card.svg', svg);

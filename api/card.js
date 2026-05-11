@@ -15,7 +15,8 @@ module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600');
 
   try {
-    const stats = await fetchStats();
+    const modes = req.query && req.query.modes;
+    const stats = await fetchStats(modes);
     res.end(generateSVG(stats));
   } catch (err) {
     console.error('[monkeytype-card]', err);
